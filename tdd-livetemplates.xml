@@ -1,0 +1,50 @@
+<TemplatesExport>
+  <Folder name="File 'tdd-livetemplates.xml'">
+    <Folder name="TDD">
+      <Template uid="8ccb4d69-f594-408e-bbc8-2c653d98bd34" text="[Test]&#xD;&#xA;public void $TESTNAME$()&#xD;&#xA;{&#xD;&#xA;    $END$&#xD;&#xA;}" shortcut="t" description="Create a new unit test" reformat="true" shortenQualifiedReferences="true">
+        <Context>
+          <CSharpContext context="TypeMember" />
+        </Context>
+        <Variables>
+          <Variable name="TESTNAME" expression="" initialRange="0" />
+        </Variables>
+        <CustomProperties />
+      </Template>
+      <Template uid="9cd64f90-122b-4e0c-92b5-d67f8d58e53b" text="using NUnit.Framework;&#xD;&#xA;&#xD;&#xA;namespace $NAMESPACE$&#xD;&#xA;{&#xD;&#xA;    [TestFixture]&#xD;&#xA;    public class $CLASSNAME$Fixture&#xD;&#xA;    {&#xD;&#xA;        [Test]&#xD;&#xA;        public void $TESTNAME$()&#xD;&#xA;        {&#xD;&#xA;            $END$&#xD;&#xA;        }&#xD;&#xA;    }&#xD;&#xA;}&#xD;&#xA;    " shortcut="tf" description="Create a new TestFixture" reformat="true" shortenQualifiedReferences="true">
+        <Context>
+          <CSharpContext context="TypeAndNamespace" />
+        </Context>
+        <Variables>
+          <Variable name="NAMESPACE" expression="fileDefaultNamespace()" initialRange="-1" />
+          <Variable name="CLASSNAME" expression="" initialRange="0" />
+          <Variable name="TESTNAME" expression="" initialRange="0" />
+        </Variables>
+        <CustomProperties />
+      </Template>
+      <Template uid="b5b31e46-5952-42b7-bd4e-2ea1e6e7ca2f" text="[Test]&#xD;&#xA;[ExpectedException(typeof($EXCEPTIONTYPE$))]&#xD;&#xA;public void $TESTNAME$()&#xD;&#xA;{&#xD;&#xA;    $END$&#xD;&#xA;}" shortcut="te" description="Create a new unit test with ExpectedException" reformat="true" shortenQualifiedReferences="true">
+        <Context>
+          <CSharpContext context="TypeMember" />
+        </Context>
+        <Variables>
+          <Variable name="EXCEPTIONTYPE" expression="" initialRange="0" />
+          <Variable name="TESTNAME" expression="" initialRange="0" />
+        </Variables>
+        <CustomProperties />
+      </Template>
+      <Template uid="85925082-d520-4a51-9a7b-ffefddb9cebb" text="[SetUp]&#xD;&#xA;public void TestInitialize()&#xD;&#xA;{&#xD;&#xA;    $END$&#xD;&#xA;}" shortcut="ti" description="Create a new SetUp method" reformat="true" shortenQualifiedReferences="true">
+        <Context>
+          <CSharpContext context="TypeMember" />
+        </Context>
+        <Variables />
+        <CustomProperties />
+      </Template>
+      <Template uid="769a5344-fdd4-46c7-a14d-6a34b583749e" text="[TearDown]&#xD;&#xA;public void TestCleanup()&#xD;&#xA;{&#xD;&#xA;    $END$&#xD;&#xA;}" shortcut="td" description="Create a newTearDown method" reformat="true" shortenQualifiedReferences="true">
+        <Context>
+          <CSharpContext context="TypeMember" />
+        </Context>
+        <Variables />
+        <CustomProperties />
+      </Template>
+    </Folder>
+  </Folder>
+</TemplatesExport>
