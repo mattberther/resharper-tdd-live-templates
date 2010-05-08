@@ -1,13 +1,13 @@
 These templates reduce the amount of keystrokes required to write NUnit tests. The tdd-livetemplates.xml file is in a format that can be imported into Jetbrains Resharper. The live templates introduce the following templates:
 
-`test`
+    // typing test and hitting TAB invokes this template
     [Test]
     public void TESTNAME()
     {
 
     }
 
-`tf`
+    // typing tf and hitting TAB invokes this template
     using NUnit.Framework;
 
     namespace NAMESPACE
@@ -23,7 +23,7 @@ These templates reduce the amount of keystrokes required to write NUnit tests. T
         }
     }
 
-`te`
+    // typing te and hitting TAB invokes this template
     [Test]
     [ExpectedException(typeof(EXCEPTIONTYPE))]
     public void TESTNAME()
@@ -31,14 +31,14 @@ These templates reduce the amount of keystrokes required to write NUnit tests. T
 
     }
 
-`ti`
+    // typing ti and hitting TAB invokes this template
     [SetUp]
     public void TestInitialize()
     {
 
     }
 
-`td`
+    // typing td and hitting TAB invokes this template    
     [TearDown]
     public void TestCleanup()
     {
